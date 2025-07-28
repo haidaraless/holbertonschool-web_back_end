@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
-def add(a: float, b: float) -> float:
-    return float(a + b)
+"""
+Basic annotations
+"""
 
+
+def add(a: float, b: float) -> float:
+    """function accepts two floats and returns sum of type float"""
+    return float(a + b)
