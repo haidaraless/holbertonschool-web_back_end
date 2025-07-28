@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-
-from typing import List
-
 """
 Complex annotations - list of floats
 """
+from typing import List
 
 
 def sum_list(numbers: List[float]) -> float:
