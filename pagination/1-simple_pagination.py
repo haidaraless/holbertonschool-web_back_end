@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
+"""Module: simple pagination data"""
+
 import csv
 import math
 from typing import List
 index_range = __import__('0-simple_helper_function').index_range
-
-"""Module: simple pagination data"""
 
 
 class Server:
@@ -29,8 +29,8 @@ class Server:
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """paginate data"""
 
-        assert isinstance(page, int) and page > 0
-        assert isinstance(page_size, int) and page_size > 0
+        assert isinstance(page, int) and page > 0, 'must > than 0'
+        assert isinstance(page_size, int) and page_size > 0, 'must > than 0'
 
         data = self.dataset()
 
