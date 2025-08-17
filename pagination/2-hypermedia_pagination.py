@@ -8,8 +8,7 @@ index_range = __import__('0-simple_helper_function').index_range
 
 
 class Server:
-    """Server class to paginate a database of popular baby names.
-    """
+    """Server class to paginate a database of popular baby names."""
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
@@ -26,7 +25,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        """paginate data"""
+        """paginate data through a specific page"""
 
         assert isinstance(page, int) and page > 0, 'must > than 0'
         assert isinstance(page_size, int) and page_size > 0, 'must > than 0'
@@ -40,7 +39,9 @@ class Server:
 
         return list(data[start:end])
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict():
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
+        """return a page with hypermedia metadata"""
+
         data_page = self.get_page(page, page_size)
         total_pages = math.ceil(len(self.dataset()) / page_size)
 
