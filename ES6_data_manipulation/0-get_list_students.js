@@ -7,4 +7,4 @@ function getListStudents()
   ];
 }
 
-console.log(getListStudents());
+export default getListStudents;
